@@ -1,0 +1,46 @@
+﻿@model SampleDBConn.Model.Employee
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Employee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EmpID" />
+            <div class="form-group">
+                <label asp-for="EmpLastName" class="control-label"></label>
+                <input asp-for="EmpLastName" class="form-control" />
+                <span asp-validation-for="EmpLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpFirstName" class="control-label"></label>
+                <input asp-for="EmpFirstName" class="form-control" />
+                <span asp-validation-for="EmpFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpOrganization" class="control-label"></label>
+                <input asp-for="EmpOrganization" class="form-control" />
+                <span asp-validation-for="EmpOrganization" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpCity" class="control-label"></label>
+                <input asp-for="EmpCity" class="form-control" />
+                <span asp-validation-for="EmpCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
